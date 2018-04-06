@@ -1,7 +1,8 @@
+$font-lobster: 'Lobster Two', cursive;
+
 body{
     text-align: center;
     font-family: 'Nunito', sans-serif;
-
 }
 
 .hero{
@@ -11,7 +12,21 @@ body{
     color: #F9FAFA;
 }
 
-.hero-header_subtext{
-    font-weight: 400;
-    font-size: 1.25rem;
+.hero-header_psuedoIcon{
+    font-family: $font-lobster;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.flip-panel{
+    height: 10%;
+    width: 100%;
+    background-color: red;
+    transition: transform .5s ease;
+}
+
+@for $i from 1 through 10{
+    .panel-#{$i}{
+        transform: translateY(calc(#{$i} * -100%));
+    }
 }
