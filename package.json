@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Aosanders/MySite/issues"
   },
-  "homepage": "https://github.com/Aosanders/MySite#readme"
+  "homepage": "https://github.com/Aosanders/MySite#readme",
+  "dependencies": {
+    "node-sass": "^4.8.3"
+  }
 }

@@ -15,36 +15,57 @@ body {
 
 .flip-panel {
   height: 10%;
-  width: 100%;
-  background-color: red;
-  transition: transform .5s ease; }
+  width: 100%; }
 
 .panel-1 {
-  transform: translateY(calc(1 * -100%)); }
+  background-color: hsl(calc(1 * 5), 100%, 50%);
+  transform: translateY(calc(1 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-2 {
-  transform: translateY(calc(2 * -100%)); }
+  background-color: hsl(calc(2 * 5), 100%, 50%);
+  transform: translateY(calc(2 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-3 {
-  transform: translateY(calc(3 * -100%)); }
+  background-color: hsl(calc(3 * 5), 100%, 50%);
+  transform: translateY(calc(3 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-4 {
-  transform: translateY(calc(4 * -100%)); }
+  background-color: hsl(calc(4 * 5), 100%, 50%);
+  transform: translateY(calc(4 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-5 {
-  transform: translateY(calc(5 * -100%)); }
+  background-color: hsl(calc(5 * 5), 100%, 50%);
+  transform: translateY(calc(5 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-6 {
-  transform: translateY(calc(6 * -100%)); }
+  background-color: hsl(calc(6 * 5), 100%, 50%);
+  transform: translateY(calc(6 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-7 {
-  transform: translateY(calc(7 * -100%)); }
+  background-color: hsl(calc(7 * 5), 100%, 50%);
+  transform: translateY(calc(7 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-8 {
-  transform: translateY(calc(8 * -100%)); }
+  background-color: hsl(calc(8 * 5), 100%, 50%);
+  transform: translateY(calc(8 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-9 {
-  transform: translateY(calc(9 * -100%)); }
+  background-color: hsl(calc(9 * 5), 100%, 50%);
+  transform: translateY(calc(9 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
 
 .panel-10 {
-  transform: translateY(calc(10 * -100%)); }
+  background-color: hsl(calc(10 * 5), 100%, 50%);
+  transform: translateY(calc(10 * -101%));
+  transition: transform 0.5s cubic-bezier(0.15, 0.84, 0.41, 1.18); }
+
+.move-panel {
+  transform: translateY(0); }
