@@ -1,34 +1,37 @@
 window.addEventListener("DOMContentLoaded", function(){
     let flipPanels = document.querySelector(".hero");
 
-    panelDown(0);
+    panelDown(0, flipPanels);
 
 
-    function panelDown(index){
-        if(index === flipPanels.children.length){
-            setTimeout(()=>turnPanel((flipPanels.children.length-1)), 500);
+    function panelDown(index, panels){
+        if(index === panels.children.length){
+            setTimeout(()=>turnPanel((panels.children.length-1), panels), 500);
             return;
         }
-        setTimeout(()=>flipPanels.children[index].classList.add("move-panel"), 200);
-        setTimeout(()=>panelDown(++index), 200);
+        setTimeout(()=>{
+            panels.children[index].classList.add("move-panel");
+            panelDown(++index, panels);
+        }, 200);
     }
 
-    function turnPanel(index){
-        if(index >= 0){
-            setTimeout(()=>flipPanels.children[index].classList.add("blinds-panel"), 200);
-            setTimeout(()=>turnPanel(--index), 200);
+    function turnPanel(index, panels){
+        if(index < 0){
+            removePanels(panels);
+            return;
         }
 
-        else{
-            removePanels();
-        }
+            setTimeout(()=>{
+                panels.children[index].classList.add("blinds-panel");
+                turnPanel(--index, panels);
+            }, 200);
     }
 
-    function removePanels(){
-       let panels = flipPanels.getElementsByClassName("flip-panel");
+    function removePanels(panels){
+       let panelChildren = panels.getElementsByClassName("flip-panel");
        setTimeout(()=>{
-            while(panels.length != 0){
-                flipPanels.removeChild(panels[0]);
+            while(panelChildren.length != 0){
+                panels.removeChild(panelChildren[0]);
             }
         },400);
     }
